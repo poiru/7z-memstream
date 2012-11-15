@@ -72,7 +72,7 @@ static SRes MemInStream_Seek(void *pp, Int64 *pos, ESzSeek origin)
   return SZ_OK;
 }
 
-void MemInStream_Init(CMemInStream *p, void *begin, size_t length)
+void MemInStream_Init(CMemInStream *p, const void *begin, size_t length)
 {
   p->begin = p->pos = (Byte *)begin;
   p->end = p->begin + length;

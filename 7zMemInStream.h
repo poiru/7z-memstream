@@ -12,11 +12,11 @@
 typedef struct
 {
   ILookInStream s;
-  Byte *begin;
-  Byte *pos;
-  Byte *end;
+  const Byte *begin;
+  const Byte *pos;
+  const Byte *end;
 } CMemInStream;
 
-void MemInStream_Init(CMemInStream *p, void *begin, size_t length);
+void MemInStream_Init(CMemInStream *p, const void *begin, size_t length);
 
 #endif
