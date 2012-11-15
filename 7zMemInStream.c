@@ -64,7 +64,7 @@ static SRes MemInStream_Seek(void *pp, Int64 *pos, ESzSeek origin)
   {
     case SZ_SEEK_SET: p->pos = p->begin + *pos; break;
     case SZ_SEEK_CUR: p->pos += *pos; break;
-    case SZ_SEEK_END: p->pos = p->end - *pos; break;
+    case SZ_SEEK_END: p->pos = p->end + *pos; break;
     default: return 1;
   }
 
